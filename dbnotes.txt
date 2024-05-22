@@ -34,3 +34,15 @@ Where PId = 1;
 Rollback;
 Select * from Products;
 
+create table cust_1 (Cust_Id number(3) Primary key, Cust_Name varchar(15) not null, Cust_Email varchar(20) not nul, Cust_City varchar(20));
+
+
+insert into cust_1 values(1, 'Resh', 'resh@wipro.com','Jabalpur');
+insert into cust_1 values(2, 'Jignesh', 'jignesh@wipro.com','Jhasi');
+insert into cust_1 values(3, 'Mohan', 'mohan@wipro.com','Jabalpur');
+desc cust_1;
+select * from cust_1;
+
+select Cust_Name, Cust_Email 
+from cust_1 
+where Cust_City = 'Jabalpur';
