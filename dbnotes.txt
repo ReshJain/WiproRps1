@@ -1,0 +1,19 @@
+http://127.0.0.1:9500/apex
+sudo service oracle-xe start
+
+create table orders(odrId number(3) Primary key, odrName varchar(15) not null, odrPrice number(7,2) not null );
+desc orders;
+Insert into orders values(1,'Bag',300.0);
+Insert into orders values(2,'Pencil',10.0);
+Insert into orders values(3,'Books',500.0);
+Insert into orders values(4,'Laptop',30000.55);
+select * from orders;
+delete from orders where odrId = 2;
+savepoint a;
+delete from orders where odrId = 3;
+savepoint b;
+delete from orders where odrId = 4;
+commit
+select * from orders;
+rollback;
+select * from orders;
