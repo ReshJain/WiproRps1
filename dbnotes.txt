@@ -46,3 +46,5 @@ select * from cust_1;
 select Cust_Name, Cust_Email 
 from cust_1 
 where Cust_City = 'Jabalpur';
+
+https://docs.google.com/document/d/1KwMnRE6GGtO-dcyLb6tcQfWj04cIAOZ2mRszl0BW9oc/edit
